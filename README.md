@@ -89,4 +89,4 @@ The trick here was to use another ASCII character instead of space called _thin 
 
 The problem with normal space is the same length as a normal character resulting it is possible to create that pyramidal effect.
 Below is the output of the main function, the run of all tests.
-![Result](https://github.com/davidalexandru1370/SnykOA/static/002.jpg)
+![Result](https://github.com/davidalexandru1370/SnykOA/blob/main/static/002.png)
