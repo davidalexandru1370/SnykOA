@@ -76,8 +76,10 @@ def run_all_tests():
 
 
 if __name__ == "__main__":
+    print("Running all tests...")
     run_all_tests()
-
+    print("All tests passed.")
+    
     n: int = 4
     staircase: str = compute_staircase(n)
     print(staircase)
