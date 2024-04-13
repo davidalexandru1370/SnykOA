@@ -53,8 +53,11 @@ def run_all_test():
     test_with_equal_floor_and_ceil()
 
 if __name__ == "__main__":
+    print("Running all tests...")
     run_all_test()
+    print("All tests passed.")
 
     txt: str = "if man was meant to stay on the ground god would have given us roots."
     grid: List[str] = encrypt(txt)
-    print(grid)
+    for word in grid:
+        print(word)

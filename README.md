@@ -89,11 +89,15 @@ WWW works similarly with a bookshelf with books. Imagine each book contains text
 
 The trick here was to use another ASCII character instead of space called _thin space_ which is 1/5 smaller than the normal space.
 
-The problem with normal space is the same length as a normal character resulting it is possible to create that pyramidal effect.
-Below is the output of the main function, the run of all tests.
+The problem with normal space is the same length as a normal character resulting it is impossible to create that pyramidal effect.
+Below is the output of the main function, the run of all tests. Unit tests have been written to check the correctness of the solution.
 
 ![Result](https://github.com/davidalexandru1370/SnykOA/blob/main/static/002.png)
 
 # 8.
 
 [Solution](https://github.com/davidalexandru1370/SnykOA/blob/main/8.py)
+
+The solution is to split get the concatenation of all the words and split into substrings according to the floor and ceil.
+
+![Result](https://github.com/davidalexandru1370/SnykOA/blob/main/static/Capture3.png)
