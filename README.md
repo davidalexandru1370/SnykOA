@@ -100,4 +100,4 @@ Below is the output of the main function, the run of all tests. Unit tests have 
 
 The solution is to split get the concatenation of all the words and split into substrings according to the floor and ceil.
 
-![Result](https://github.com/davidalexandru1370/SnykOA/blob/main/static/Capture3.png)
+![Result](https://github.com/davidalexandru1370/SnykOA/blob/main/static/Capture3.PNG)
