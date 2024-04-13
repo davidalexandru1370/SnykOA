@@ -59,10 +59,26 @@ Linked list and arrays are two different data structures with advantages and dis
 
 # 3. What is HTTP? How is it different from HTTPS?
 
-HTTP is the acronym for HyperText-Transfer-Protocol and it is a communication protocol for networks. It is also worth mentioning that is found at the application layer in the OSI model of network stack. An http request might be composed of header, body. The header of the request contains key value pairs such as Authorization for authenticating an user, Content-type like JSON, multiform/data, the verb of the request(GET, POST, PUT, DELETE, PATCH) and many more. The body contains data we want to send to the client (this do not apply to all the verbs since GET does not support body).
+HTTP is the acronym for HyperText-Transfer-Protocol and it is a communication protocol for networks. It is also worth mentioning that is found at the application layer in the OSI model of network stack. An http request might be composed of header, body. The header of the request contains key value pairs such as Authorization for authenticating an user, Content-type like JSON, multiform/data, the verb of the request(GET, POST, PUT, DELETE, PATCH) and many more. The body contains data we want to send to the client (this do not apply to all the verbs since GET does not support body). The only problem with this protocol is that is not securely encrypted and someone can steal the data if the request is intercepted until the client. To solve this problem HTTPS (HyperText Transfer Protocol Secured) solved this problem using crytographic algorithms to encrypt and decrypt data. So HTTP is different from HTTPS in the way that it does not encrypt and decrypt the data for better security of requests.
 
 # 4. Can you give some examples of common HTTP response codes?
 
+The HTTP status codes can be split in 5 major categories such as:
+
+- 1XX - Status codes for informational responses.
+
+- 2XX - Status codes for success responses. In this category we can talk about the 200 status codes for Ok, 201 for Created when an entity is created on the server, 204 No content when there is not data on the server according the client needs
+
+- 3XX - Status codes for 300 redirection messages. The most used ones are 301 Moved permanently when we have multiple versions of an api such as _/api/v1/_ and _/api/v2_ and v1 is outdated.
+
+- 4XX - Status codes for client errors. The most used ones are 400 bad request when client does not respect some validations on entities or have missing fields, 401 Unauthorized when the client is not authenticated to access a resource or an endpoint, 403 Forbidden when client is authorized but it does not have granted rights to access that resource, 404 Not Found when something does not exists such as an entity, an endpoint, 409 Conflict when we might have an already existing entity in the system according to certain fields (i.e a duplicate entry).
+
+- 5XX - Status codes for server errors. The most used one is 500 meaning server error and something bad happened on the server (exception not catched, validation errors)
+
 # 5. What is the difference between authorization and authentication?
 
+The authentication is the process of checking if the user is authenticated in the system using different approaches such as JWT (JSON Web Token) from the Authorization header in the request, or using a session id. This also involve that JWT is valid (not expired, signed). Authorization means the user is authenticated, but we check its rights to access a resource or to do a certain action. This rights can come from a role, a policy. This can also come from entitie's owner, meaning I am only allowed to alter state of my entities in the system.
+
 # 6. How would you explain to a 5-year-old how the WWW works?
+
+WWW works similarly with a bookshelf with books. Imagine each book contains text, stories, images. This books are called webpages in the internet. Imagine each book can redirect you to another books. Like after you read _Adventures of Tom Sawyer by Mark Twain_ you go to _Adventures of Huckleberry Finn by Tom Sawyer_. In internet this is called a link.
