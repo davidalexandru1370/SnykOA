@@ -17,6 +17,10 @@ def encrypt(text: str) -> List[str]:
         start: int = columns * index
         substring = text[start:start + columns]
         grid.append(substring)
+   
+    difference_letters = rows * columns
+    if difference_letters < length:
+        grid.append(text[difference_letters:])
 
     return grid
 
@@ -47,10 +51,20 @@ def test_with_equal_floor_and_ceil():
     assert expected_grid == grid
 
 
+def test_with_not_perfect_square_length():
+    txt: str = "a" * 24
+    expected_grid: List[str] = ["aaaaa", "aaaaa", "aaaaa", "aaaaa", "aaaa"]
+
+    grid: List[str] = encrypt(txt)
+
+    assert expected_grid == grid
+    
+
 def run_all_test():
     test_encrypt_with_multiple_spaces()
     test_without_spaces()
     test_with_equal_floor_and_ceil()
+    test_with_not_perfect_square_length()
 
 if __name__ == "__main__":
     print("Running all tests...")
@@ -59,5 +73,11 @@ if __name__ == "__main__":
 
     txt: str = "if man was meant to stay on the ground god would have given us roots."
     grid: List[str] = encrypt(txt)
+    for word in grid:
+        print(word)
+
+    text2: str = "a" * 24
+    grid = encrypt(text2)
+
     for word in grid:
         print(word)
